@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="https://i.ibb.co.com/J7cd2bt/3.jpg"  type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRY OUT SKD CPNS 2024/2025 || mr.D</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+                        /* Add your watermark image as the background */
+            background-image: url('https://i.ibb.co.com/jTFqHWz/5.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 500px 300px; /* Adjust size */
+            opacity: 0.9; /* Adjust opacity for the watermark effect */
+            /* Optional: Set background to cover entire screen */
+            background-attachment: fixed;
+        }
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+                h1 {
+            text-align: center;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question label {
+            font-weight: bold;
+        }
+        .correct-answer {
+            color: green;
+        }
+        .wrong-answer {
+            text-decoration: line-through;
+            color: red;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .result {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        .icon {
+            font-weight: bold;
+            margin-left: 5px;
+        }
+        .centered-img {
+            display:block; margin: 0 auto;
+            width: 50%;
+        }
+        .timer {
+        text-align: center;
+        position: fixed;
+        top: 0;
+        right: 0; /* Start centering from 50% left */
+         /* Shift it back by 50% of its own width */
+        border: solid 2px black;
+        padding: 20px;
+        background-color: white;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .container {
+                width: 95%;      /* Full width for smaller screens */
+                padding: 10px;     /* Reduced padding for smaller screens */
+            }
+            .timer {
+            top: 0;
+            padding: 20px 1px;
+            width: 100%; /* Ensure full width on smaller screens */
+            left: 0; /* Reset left position */
+            transform: none; /* No translation needed when width is 100% */
+        }
+        }
+        
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Try Out Akbar SKD CPNS 2024/2025</h1>
+    <h2 class="timer" id="timer" >
+        Sisa Waktu: 100 menit
+    </h2>
+    <div class="question" data-question="q1">
+        <label>1. Proyek 16 hari dikerjakan oleh 8 orang. Pada hari ke-6, 3 orang meminta izin dan hanya bisa bekerja lagi pada 8 hari kemudian. Berapa tambahan hari agar proyek selesai?</label><br>
+        <input type="radio" name="q1" value="A"> A. 2 hari<br>
+        <input type="radio" name="q1" value="B"> B. 3 hari<br>
+        <input type="radio" name="q1" value="C"> C. 4 hari<br>
+        <input type="radio" name="q1" value="D"> D. 5 hari<br>
+    </div>
+
+    <div class="question" data-question="q2">
+        <label>2. Sisa uang sebesar 120.000 rupiah. Sepertiga digunakan untuk membeli majalah dan seperempat untuk membeli buku tulis. Berapa jumlah uang awal?</label><br>
+        <input type="radio" name="q2" value="A"> A. 188.000<br>
+        <input type="radio" name="q2" value="B"> B. 240.000<br>
+        <input type="radio" name="q2" value="C"> C. 288.000<br>
+        <input type="radio" name="q2" value="D"> D. 300.000<br>
+    </div>
+
+    <div class="question" data-question="q3">
+        <label>3. Sebanyak 60 pekerja menyelesaikan proyek dalam 10 bulan. Jika proyek harus selesai dalam 8 bulan, berapa tambahan pekerja yang diperlukan?</label><br>
+        <input type="radio" name="q3" value="A"> A. 15 pekerja<br>
+        <input type="radio" name="q3" value="B"> B. 20 pekerja<br>
+        <input type="radio" name="q3" value="C"> C. 25 pekerja<br>
+        <input type="radio" name="q3" value="D"> D. 30 pekerja<br>
+    </div>
+
+    <div class="question" data-question="q4">
+        <label>4. Sebanyak 30 pekerja menargetkan menyelesaikan proyek dalam 240 hari. Pada hari ke-121, 10 pekerja berhenti. Dalam berapa hari proyek tersebut akan selesai?</label><br>
+        <input type="radio" name="q4" value="A"> A. 280 hari<br>
+        <input type="radio" name="q4" value="B"> B. 300 hari<br>
+        <input type="radio" name="q4" value="C"> C. 320 hari<br>
+        <input type="radio" name="q4" value="D"> D. 340 hari<br>
+    </div>
+
+    <div class="question" data-question="q5">
+        <label>5. Lengkapi pola berikut: 2, 9, 6, 12, ..., ..., 18, 20, 27, 30.</label><br>
+        <input type="radio" name="q5" value="A"> A. 13, 15<br>
+        <input type="radio" name="q5" value="B"> B. 14, 16<br>
+        <input type="radio" name="q5" value="C"> C. 14, 17<br>
+        <input type="radio" name="q5" value="D"> D. 13, 16<br>
+    </div>
+    <div class="question" data-question="q6">
+        <label>6. Wati dan 4 temannya mengerjakan 100 baju dalam waktu 10 hari. Namun, jika waktu pengerjaan dipercepat menjadi 5 hari, berapa banyak tambahan teman yang diperlukan untuk membantu?</label><br>
+        <input type="radio" name="q6" value="A"> A. 5 orang<br>
+        <input type="radio" name="q6" value="B"> B. 10 orang<br>
+        <input type="radio" name="q6" value="C"> C. 15 orang<br>
+        <input type="radio" name="q6" value="D"> D. 20 orang<br>
+    </div>
+    
+    <div class="question" data-question="q7">
+        <label>7. 8+8*8/8-8.</label><br>
+        <input type="radio" name="q7" value="A"> A. 8<br>
+        <input type="radio" name="q7" value="B"> B. 16<br>
+        <input type="radio" name="q7" value="C"> C. 24<br>
+        <input type="radio" name="q7" value="D"> D. 32<br>
+    </div>
+    
+    <div class="question" data-question="q8">
+        <label>8. Sebanyak 65 sapi menghabiskan 130 karung rumput dalam waktu 1 bulan. Jika ditambah 15 sapi lagi, berapa karung rumput yang akan habis dalam 1 bulan?</label><br>
+        <input type="radio" name="q8" value="A"> A. 120 karung<br>
+        <input type="radio" name="q8" value="B"> B. 140 karung<br>
+        <input type="radio" name="q8" value="C"> C. 160 karung<br>
+        <input type="radio" name="q8" value="D"> D. 180 karung<br>
+    </div>
+
+    <div class="question" data-question="q9">
+        <label>9. Sebanyak 40 pekerja menargetkan menyelesaikan proyek dalam 90 hari. Pada hari ke-50, 15 pekerja libur selama 4 hari. Berapa pekerja tambahan yang diperlukan untuk tetap sesuai target?</label><br>
+        <input type="radio" name="q9" value="A"> A. 3 pekerja<br>
+        <input type="radio" name="q9" value="B"> B. 6 pekerja<br>
+        <input type="radio" name="q9" value="C"> C. 9 pekerja<br>
+        <input type="radio" name="q9" value="D"> D. Tidak perlu tambahan pekerja<br>
+    </div>
+    <div class="question" data-question="q10">
+        <label>10. Sebuah pabrik dapat menghasilkan 500 unit dalam 6 jam dengan 10 orang pekerja. Setelah 4 jam bekerja, 4 orang berhenti. Berapa banyak pekerja tambahan yang diperlukan untuk menyelesaikan sisa pekerjaan tepat waktu?</label><br>
+        <input type="radio" name="q10" value="A"> A. 2 orang<br>
+        <input type="radio" name="q10" value="B"> B. 3 orang<br>
+        <input type="radio" name="q10" value="C"> C. 4 orang<br>
+        <input type="radio" name="q10" value="D"> D. 5 orang<br>
+    </div>
+    
+    <div class="question" data-question="q11">
+        <label>11. Pada tanggal 10, 15, dan 20 Mei, ada dua negara yang bertanding pada pukul 20.45, 18.15, dan 21.30. Jika semua pertandingan dilaksanakan bersamaan, berapa total waktu yang terlewat dari pertandingan pertama hingga terakhir?</label><br>
+        <input type="radio" name="q11" value="A"> A. 3 jam 15 menit<br>
+        <input type="radio" name="q11" value="B"> B. 3 jam 30 menit<br>
+        <input type="radio" name="q11" value="C"> C. 3 jam 45 menit<br>
+        <input type="radio" name="q11" value="D"> D. 4 jam<br>
+    </div>
+    
+    <div class="question" data-question="q12">
+        <label>12. Sebuah rumah dikerjakan oleh 10 orang dalam 120 hari. Jika ada 4 rumah yang harus diselesaikan dalam 240 hari, berapa pekerja yang dibutuhkan untuk menyelesaikan semuanya tepat waktu?</label><br>
+        <input type="radio" name="q12" value="A"> A. 10 orang<br>
+        <input type="radio" name="q12" value="B"> B. 15 orang<br>
+        <input type="radio" name="q12" value="C"> C. 20 orang<br>
+        <input type="radio" name="q12" value="D"> D. 25 orang<br>
+    </div>
+    
+    <div class="question" data-question="q13">
+        <label>13. Sebuah mesin direncanakan menyelesaikan pekerjaan dalam 10 hari. Setelah 5 hari, ditambah 1 mesin lagi yang dapat menyelesaikan pekerjaan dalam 6 hari. Berapa hari waktu yang diperlukan untuk menyelesaikan pekerjaan tersebut?</label><br>
+        <input type="radio" name="q13" value="A"> A. 4 hari<br>
+        <input type="radio" name="q13" value="B"> B. 5 hari<br>
+        <input type="radio" name="q13" value="C"> C. 6 hari<br>
+        <input type="radio" name="q13" value="D"> D. 7 hari<br>
+    </div>
+    
+    <div class="question" data-question="q14">
+        <label>14. Lengkapi pola bilangan berikut: 1080, 540, 180, 90, ...</label><br>
+        <input type="radio" name="q14" value="A"> A. 30<br>
+        <input type="radio" name="q14" value="B"> B. 45<br>
+        <input type="radio" name="q14" value="C"> C. 60<br>
+        <input type="radio" name="q14" value="D"> D. 75<br>
+    </div>
+    
+    <div class="question" data-question="q15">
+        <label>15. Ada 5 pertandingan sepak bola, masing-masing dimulai pada pukul 17.45, 19.00, 20.30, 21.15, dan 22.30. Jika semua pertandingan dilaksanakan bersamaan, berapa total waktu yang terlewat antara pertandingan pertama dan terakhir? </label><br>
+        <input type="radio" name="q15" value="A"> A. 4 jam 15 menit<br>
+        <input type="radio" name="q15" value="B"> B. 4 jam 45 menit<br>
+        <input type="radio" name="q15" value="C"> C. 5 jam<br>
+        <input type="radio" name="q15" value="D"> D. 5 jam 30 menit<br>
+    </div>
+    
+    <div class="question" data-question="q16">
+        <label>16. Harga 5 kg buah adalah 30.000 rupiah. Jika membeli 5 kg mendapatkan bonus 1 kg, berapa jumlah yang harus dibayar jika membeli 30 kg buah?</label><br>
+        <input type="radio" name="q16" value="A"> A. 120.000 rupiah<br>
+        <input type="radio" name="q16" value="B"> B. 150.000 rupiah<br>
+        <input type="radio" name="q16" value="C"> C. 180.000 rupiah<br>
+        <input type="radio" name="q16" value="D"> D. 210.000 rupiah<br>
+    </div>
+
+    <div class="question" data-question="q17">
+        <img src="https://i.ibb.co.com/g358TM6/q17.jpg" alt="q17" width="50%" class="centered-img"> <br>
+        <label>17. Tabel di atas menampilkan data rata-rata penjualan produk Toko Alat Tulis setiap bulan pada tahun 2023. Pada bulan apa selisih penjualan terbesar antara Alat Tulis Kantor dan Alat Tulis Sekolah?</label><br>
+        <input type="radio" name="q17" value="A"> A. Bulan Januari<br>
+        <input type="radio" name="q17" value="B"> B. Bulan Februari<br>
+        <input type="radio" name="q17" value="C"> C. Bulan Maret<br>
+        <input type="radio" name="q17" value="D"> D. Bulan April<br>
+    </div>
+    
+    <div class="question" data-question="q18">
+        <label>18. Tasya sedang membuat kerajinan tangan, yaitu kerajinan tangan M, L, K, O, dan P. Setiap kerajinan tangan membutuhkan bahan masing-masing. Kain flannel dibutuhkan pada sebuah jenis kerajinan tangan, kain rajut tidak akan dibutuhkan pada kerajinan tangan L dan K, sedangkan kain spandeks hanya akan dibutuhkan pada kerajinan tangan M dan L. Tasya sedang mempersiapkan kain flannel dan kain spandeks. Kerajinan tangan apakah yang dibuat Tasya?</label><br>
+        <input type="radio" name="q18" value="A"> A. Kerajinan P<br>
+        <input type="radio" name="q18" value="B"> B. Kerajinan O<br>
+        <input type="radio" name="q18" value="C"> C. Kerajinan K<br>
+        <input type="radio" name="q18" value="D"> D. Kerajinan L<br>
+        <input type="radio" name="q18" value="E"> E. Kerajinan M<br>
+    </div>
+    
+    <div class="question" data-question="q19">
+        <label>19.  2/3 + 4/3 × 3 − 1 1/4 =...</label><br>
+        <input type="radio" name="q19" value="A"> A. 3 13/12<br>
+        <input type="radio" name="q19" value="B"> B. 3 7/12<br>
+        <input type="radio" name="q19" value="C"> C. 3 5/12<br>
+        <input type="radio" name="q19" value="D"> D. 4 13/12<br>
+        <input type="radio" name="q19" value="E"> E. 4 7/12<br>
+    </div>
+    
+    <div class="question" data-question="q20">
+        <label>20. 7 1/2 ÷ 5 + 3/4 × 8 − 1/8 =...</label><br>
+        <input type="radio" name="q20" value="A"> A. 8,125<br>
+        <input type="radio" name="q20" value="B"> B. 8,375<br>
+        <input type="radio" name="q20" value="C"> C. 7,125<br>
+        <input type="radio" name="q20" value="D"> D. 7,375<br>
+        <input type="radio" name="q20" value="E"> E. 7,500<br>
+    </div>
+    
+    <div class="question" data-question="q21">
+        <label>21. 2,5 + 2/5 × 1,5 ÷ 2 − 0,8 =...</label><br>
+        <input type="radio" name="q21" value="A"> A. 10<br>
+        <input type="radio" name="q21" value="B"> B. 8<br>
+        <input type="radio" name="q21" value="C"> C. 6<br>
+        <input type="radio" name="q21" value="D"> D. 4<br>
+        <input type="radio" name="q21" value="E"> E. 2<br>
+    </div>
+    
+    <div class="question" data-question="q22">
+        <label>22. Semua obat mengandung vitamin. Sebagian obat rasanya pahit. Kesimpulan yang tepat pada pernyataan di atas adalah...</label><br>
+        <input type="radio" name="q22" value="A"> A. Ada obat rasanya pahit mengandung vitamin<br>
+        <input type="radio" name="q22" value="B"> B. Ada obat rasanya tidak pahit tidak mengandung vitamin<br>
+        <input type="radio" name="q22" value="C"> C. Semua obat yang mengandung vitamin rasanya pahit<br>
+        <input type="radio" name="q22" value="D"> D. Semua obat yang tidak mengandung vitamin rasanya tidak pahit<br>
+        <input type="radio" name="q22" value="E"> E. Semua obat rasanya pahit tidak mengandung vitamin<br>
+    </div>
+    
+    <div class="question" data-question="q23">
+        <label>23. Pada lima mahasiswa P, Q, R, S, dan T yang mengikuti sebuah seminar. Mahasiswa P dan Q berasal dari fakultas yang sama, dan S dan T juga berasal dari fakultas yang sama. Bila mahasiswa yang berasal dari fakultas yang sama tidak boleh duduk berdekatan, kemungkinan posisi tempat duduk mereka dalam satu deretan adalah...</label><br>
+        <input type="radio" name="q23" value="A"> A. P, S, T, Q, R<br>
+        <input type="radio" name="q23" value="B"> B. P, Q, R, S, T<br>
+        <input type="radio" name="q23" value="C"> C. T, R, S, P, Q<br>
+        <input type="radio" name="q23" value="D"> D. P, R, T, S, Q<br>
+        <input type="radio" name="q23" value="E"> E. S, R, P, T, Q<br>
+    </div>
+    <div class="question" data-question="q24">
+        <label>24. Pada sepatu terdapat lubang tali dan sol. Hubungan objek yang setara dengan kalimat di atas adalah …</label><br>
+        <input type="radio" name="q24" value="A"> A. Pada film terdapat intro dan gitar<br>
+        <input type="radio" name="q24" value="B"> B. Pada lagu terdapat intro dan outro<br>
+        <input type="radio" name="q24" value="C"> C. Pada drama terdapat suara dan musik<br>
+        <input type="radio" name="q24" value="D"> D. Pada sinetron terdapat hiburan dan bioskop<br>
+        <input type="radio" name="q24" value="E"> E. Pada konser terdapat panggung dan hiburan<br>
+    </div>
+    
+    <div class="question" data-question="q25">
+        <label>25. Pada teater terdapat panggung dan pemeran. Hubungan objek yang setara dengan kalimat di atas adalah …</label><br>
+        <input type="radio" name="q25" value="A"> A. Pada kepala terdapat rambut dan ketombe<br>
+        <input type="radio" name="q25" value="B"> B. Pada kafe terdapat kopi dan teh<br>
+        <input type="radio" name="q25" value="C"> C. Pada sepak bola terdapat lapangan dan pemain<br>
+        <input type="radio" name="q25" value="D"> D. Pada taman terdapat pot dan tanaman<br>
+        <input type="radio" name="q25" value="E"> E. Pada sekolah terdapat siswa dan pembelajaran<br>
+    </div>
+    
+    <div class="question" data-question="q26">
+        <label>26. Kerudung : Kepala : Rambut</label><br>
+        <input type="radio" name="q26" value="A"> A. Kacamata : Wajah : Mata<br>
+        <input type="radio" name="q26" value="B"> B. Celana : Kaki : Betis<br>
+        <input type="radio" name="q26" value="C"> C. Baju : Badan : Punggung<br>
+        <input type="radio" name="q26" value="D"> D. Sepatu : Kaki : Paha<br>
+        <input type="radio" name="q26" value="E"> E. Cincin : Tangan : Jari<br>
+    </div>
+    
+    <div class="question" data-question="q27">
+        <label>27. Janggut : Wajah : Dagu</label><br>
+        <input type="radio" name="q27" value="A"> A. Kaktus : Tanah : Pot<br>
+        <input type="radio" name="q27" value="B"> B. Rambut : Kepala : Ubun-ubun<br>
+        <input type="radio" name="q27" value="C"> C. Kumis : Wajah : Bawah bibir<br>
+        <input type="radio" name="q27" value="D"> D. Alis : Wajah : Atas mata<br>
+        <input type="radio" name="q27" value="E"> E. Rumput : Pasir : Pantai<br>
+    </div>
+    
+    <div class="question" data-question="q28">
+        <label>28. Semua penipu pandai berbicara dan ramah. Tuan M tidak ramah tetapi pandai berbicara. Kesimpulan yang tepat pada pernyataan di atas adalah …</label><br>
+        <input type="radio" name="q28" value="A"> A. Tuan M seorang penipu yang pandai bicara<br>
+        <input type="radio" name="q28" value="B"> B. Tuan M seorang penipu yang tidak ramah<br>
+        <input type="radio" name="q28" value="C"> C. Tuan M seorang penipu yang pandai bicara tapi tidak ramah<br>
+        <input type="radio" name="q28" value="D"> D. Tuan M bukan seorang penipu dan pandai bicara<br>
+        <input type="radio" name="q28" value="E"> E. Tuan M bukan seorang penipu yang ramah<br>
+    </div>
+    
+    <div class="question" data-question="q29">
+        <label>29. Jika membeli minuman harus membayar dengan uang cash atau membayar melalui QRIS. Zidney membeli minuman dan tidak membayar dengan uang cash. Kesimpulan yang tepat pada pernyataan di atas adalah …</label><br>
+        <input type="radio" name="q29" value="A"> A. Zidney tidak membayar untuk membeli minuman<br>
+        <input type="radio" name="q29" value="B"> B. Zidney membayar melalui QRIS untuk membeli minuman<br>
+        <input type="radio" name="q29" value="C"> C. Zidney membayar dengan uang cash<br>
+        <input type="radio" name="q29" value="D"> D. Zidney membeli minuman dengan tidak membayar melalui QRIS<br>
+        <input type="radio" name="q29" value="E"> E. Zidney membeli minuman dengan membayar dengan uang cash<br>
+    </div>
+    
+    <div class="question" data-question="q30">
+        <label>30. Semua obat mengandung vitamin. Sebagian obat rasanya pahit. Kesimpulan yang tepat pada pernyataan di atas adalah …</label><br>
+        <input type="radio" name="q30" value="A"> A. Ada obat rasanya pahit mengandung vitamin<br>
+        <input type="radio" name="q30" value="B"> B. Ada obat rasanya tidak pahit tidak mengandung vitamin<br>
+        <input type="radio" name="q30" value="C"> C. Semua obat yang mengandung vitamin rasanya pahit<br>
+        <input type="radio" name="q30" value="D"> D. Semua obat yang tidak mengandung vitamin rasanya tidak pahit<br>
+        <input type="radio" name="q30" value="E"> E. Semua obat rasanya pahit tidak mengandung vitamin<br>
+    </div>
+    <div class="question" data-question="q31">
+        <label>31. Carilah gambar sesuai yang melanjutkan 4 gambar sebelumnya!</label><br>
+        <label><img src="https://i.ibb.co.com/PznZxZ4/qg1.jpg" alt="qg1" class="centered-img"></label><br>
+        <input type="radio" name="q31" value="A"> A<br>
+        <input type="radio" name="q31" value="B"> B<br>
+        <input type="radio" name="q31" value="C"> C<br>
+        <input type="radio" name="q31" value="D"> D<br>
+        <input type="radio" name="q31" value="E"> E<br>
+    </div>
+    
+    <div class="question" data-question="q32">
+        <label>32. Carilah gambar sesuai yang melanjutkan 4 gambar sebelumnya!</label><br>
+        <label><img src="https://i.ibb.co.com/Hr54K1b/qg2.jpg" alt="qg2" class="centered-img"></label><br>
+        <input type="radio" name="q32" value="A"> A<br>
+        <input type="radio" name="q32" value="B"> B<br>
+        <input type="radio" name="q32" value="C"> C<br>
+        <input type="radio" name="q32" value="D"> D<br>
+        <input type="radio" name="q32" value="E"> E<br>
+    </div>
+    
+    <div class="question" data-question="q33">
+        <label>33. Carilah gambar yang sesuai dengan pola disamping kiri!</label><br>
+        <label><img src="https://i.ibb.co.com/74Bz50F/qg3.jpg" alt="qg3" class="centered-img"></label><br>
+        <input type="radio" name="q33" value="A"> A<br>
+        <input type="radio" name="q33" value="B"> B<br>
+        <input type="radio" name="q33" value="C"> C<br>
+        <input type="radio" name="q33" value="D"> D<br>
+        <input type="radio" name="q33" value="E"> E<br>
+    </div>
+    
+    <div class="question" data-question="q34">
+        <label>34. Carilah gambar yang berbeda dari 4 gambar lainnnya!</label><br>
+        <label><img src="https://i.ibb.co.com/3BPpGrq/qg4.jpg" alt="qg4" class="centered-img"></label><br>
+        <input type="radio" name="q34" value="A"> A<br>
+        <input type="radio" name="q34" value="B"> B<br>
+        <input type="radio" name="q34" value="C"> C<br>
+        <input type="radio" name="q34" value="D"> D<br>
+        <input type="radio" name="q34" value="E"> E<br>
+    </div>
+    
+    <div class="question" data-question="q35">
+        <label>35. Carilah gambar yang sesuai dengan pola disamping kiri!</label><br>
+        <label><img src="https://i.ibb.co.com/FDfBx7j/qg5.jpg" alt="qg5" class="centered-img"></label><br>
+        <input type="radio" name="q35" value="A"> A<br>
+        <input type="radio" name="q35" value="B"> B<br>
+        <input type="radio" name="q35" value="C"> C<br>
+        <input type="radio" name="q35" value="D"> D<br>
+        <input type="radio" name="q35" value="E"> E<br>
+    </div>
+    
+    <div class="question" data-question="q36">
+        <label>36. Sikap positif dalam kehidupan sehari-hari seperti membantu saudara-saudara yang terkena bencana alam, berteman tanpa memandang ras atau suku, dan bertenggang rasa antar sesama mencerminkan sikap yang patut diterapkan oleh setiap warga negara. Sikap-sikap tersebut menunjukkan bahwa Pancasila berfungsi sebagai...</label><br>
+        <input type="radio" name="q36" value="A"> A. Pedoman dalam mewujudkan kesatuan dan keadilan sosial bagi seluruh rakyat Indonesia.<br>
+        <input type="radio" name="q36" value="B"> B. Panduan utama dalam membangun kehidupan bernegara yang adil dan makmur.<br>
+        <input type="radio" name="q36" value="C"> C. Dasar negara yang menjiwai setiap tindakan dan perilaku warga negara.<br>
+        <input type="radio" name="q36" value="D"> D. Pandangan hidup yang membentuk perilaku sehari-hari warga negara.<br>
+        <input type="radio" name="q36" value="E"> E. Ideologi bangsa yang memperkuat semangat kebangsaan dan membangun persatuan.<br>
+    </div>
+    
+    <div class="question" data-question="q37">
+        <label>37. Reffo adalah seorang ASN di lingkungan Pemerintah Daerah. Suatu hari, ia mendapat kabar bahwa ada salah satu kecamatan di daerahnya yang terkena musibah akibat letusan Gunung Merapi yang berada di Kabupaten Sleman. Tindakan apa yang paling tepat dilakukan Reffo setelah mendengar kabar tersebut?</label><br>
+        <input type="radio" name="q37" value="A"> A. Membantu korban musibah sebagai bentuk tanggung jawab sosial untuk meningkatkan hubungan baik dengan masyarakat.<br>
+        <input type="radio" name="q37" value="B"> B. Membantu korban musibah dengan memberikan bantuan materi dan moral agar mereka dapat pulih dan kembali beraktivitas.<br>
+        <input type="radio" name="q37" value="C"> C. Membantu korban musibah sebagai upaya mendukung pemerintah daerah dalam menjaga stabilitas di wilayah terdampak.<br>
+        <input type="radio" name="q37" value="D"> D. Membantu korban musibah sebagai implementasi cinta tanah air dan menjaga serta melindungi tanah air.<br>
+        <input type="radio" name="q37" value="E"> E. Membantu korban musibah dengan rasa empati terhadap sesama sebagai wujud dari pengabdian kemanusiaan.<br>
+    </div>
+    
+    <div class="question" data-question="q38">
+        <label>38. PNI adalah salah satu partai politik yang berperan penting dalam sejarah perjuangan kemerdekaan Indonesia. Saat ini, berbagai tantangan politik dihadapi oleh partai-partai yang memiliki akar sejarah panjang seperti PNI. Berdasarkan pemahaman tersebut, tantangan yang paling mungkin menghambat peran partai politik seperti PNI dalam konteks politik modern adalah...</label><br>
+        <input type="radio" name="q38" value="A"> A. Minimnya keterlibatan generasi muda dalam aktivitas politik yang menyebabkan kesulitan dalam regenerasi kepemimpinan.<br>
+        <input type="radio" name="q38" value="B"> B. Ketergantungan yang tinggi pada tokoh-tokoh senior partai yang mempengaruhi fleksibilitas dalam merespons dinamika politik.<br>
+        <input type="radio" name="q38" value="C"> C. Kurangnya akses terhadap media sosial dan teknologi digital yang membatasi jangkauan kampanye politik.<br>
+        <input type="radio" name="q38" value="D"> D. Persaingan ketat antarpartai politik baru yang lebih adaptif terhadap perubahan sosial.<br>
+        <input type="radio" name="q38" value="E"> E. Ketergantungan pada sumber pendanaan tradisional yang membuat sulit untuk berinovasi dalam kampanye dan strategi politik.<br>
+    </div>
+    
+    <div class="question" data-question="q39">
+        <label>39. Duta adalah seorang ASN yang menjunjung tinggi nasionalisme. Suatu hari, ia menghadiri sebuah pagelaran seni di alun-alun kota Madiun. Ketika menyaksikan pertunjukan, ia melihat temannya menampilkan budaya asing. Sebagai ASN yang bertanggung jawab dalam melestarikan budaya lokal, apa tindakan yang paling tepat yang seharusnya dilakukan Duta?</label><br>
+        <input type="radio" name="q39" value="A"> A. Menyaksikan pertunjukan sampai selesai, kemudian melaporkan kepada panitia karena menampilkan budaya asing dapat mengancam pelestarian budaya lokal.<br>
+        <input type="radio" name="q39" value="B"> B. Menyaksikan pertunjukan sampai selesai dan ikut memeriahkannya, karena menilai bahwa pertunjukan tersebut tidak akan merusak budaya lokal.<br>
+        <input type="radio" name="q39" value="C"> C. Menyaksikan pertunjukan sampai selesai, kemudian pulang dengan perasaan tidak puas dan kesal terhadap pertunjukan yang ditampilkan.<br>
+        <input type="radio" name="q39" value="D"> D. Menyaksikan pertunjukan sampai selesai, kemudian memberi tahu temannya bahwa lebih baik menampilkan budaya lokal sebagai wujud cinta tanah air.<br>
+        <input type="radio" name="q39" value="E"> E. Menyaksikan pertunjukan sampai selesai, kemudian menyarankan temannya untuk lebih fokus melestarikan budaya lokal sebagai bentuk bela negara.<br>
+    </div>
+    
+    <div class="question" data-question="q40">
+        <label>40. Tan Malaka adalah salah satu tokoh penting dalam sejarah perjuangan kemerdekaan Indonesia yang dikenal dengan gagasannya tentang kemerdekaan dan kedaulatan rakyat. Dalam perjuangannya, Tan Malaka sering mengedepankan pentingnya pendidikan dan kesadaran politik untuk membebaskan bangsa dari penjajahan. Berdasarkan pemahaman tersebut, tindakan yang paling mencerminkan penerapan nilai-nilai perjuangan Tan Malaka dalam konteks Indonesia modern adalah...</label><br>
+        <input type="radio" name="q40" value="A"> A. Meningkatkan literasi politik masyarakat melalui pendidikan politik yang inklusif dan berkelanjutan.<br>
+        <input type="radio" name="q40" value="B"> B. Mendorong pertumbuhan ekonomi dengan berfokus pada sektor industri untuk mengurangi ketergantungan pada impor.<br>
+        <input type="radio" name="q40" value="C"> C. Menjalankan program-program pembangunan infrastruktur untuk memperkuat konektivitas antar wilayah.<br>
+        <input type="radio" name="q40" value="D"> D. Memperkuat kerja sama dengan negara lain untuk meningkatkan stabilitas politik dan keamanan regional.<br>
+        <input type="radio" name="q40" value="E"> E. Mengedepankan pertumbuhan ekonomi di atas semua sektor lain demi mencapai kemakmuran nasional.<br>
+    </div>
+    <div class="question" data-question="q41">
+        <label>41. Secara umum, tujuan bela negara adalah untuk mewujudkan sikap dan perilaku yang mendukung sistem pertahanan negara. Salah satu nilai utama dalam bela negara adalah kesadaran berbangsa dan bernegara. Bagaimana kesadaran ini seharusnya diimplementasikan dalam kehidupan sehari-hari?</label><br>
+        <input type="radio" name="q41" value="A"> A. Aktif mengikuti kegiatan sosial di lingkungan sekitar untuk membangun koneksi yang kuat dengan kelompok tertentu.<br>
+        <input type="radio" name="q41" value="B"> B. Menghormati perbedaan dan menjaga kerukunan antar suku, agama, ras, dan golongan di setiap kesempatan.<br>
+        <input type="radio" name="q41" value="C"> C. Mengutamakan kepentingan nasional dalam setiap keputusan yang diambil, meskipun terkadang mengorbankan kepentingan individu atau kelompok.<br>
+        <input type="radio" name="q41" value="D"> D. Menunjukkan semangat nasionalisme dengan mengikuti berbagai acara formal yang diselenggarakan oleh pemerintah dan organisasi.<br>
+        <input type="radio" name="q41" value="E"> E. Mengkritisi kebijakan pemerintah yang dirasa tidak sesuai dengan kepentingan kelompok tertentu sebagai bentuk kepedulian terhadap bangsa.<br>
+    </div>
+    
+    <div class="question" data-question="q42">
+        <label>42. Fachry adalah seorang polisi yang bertugas di jalan raya saat libur hari raya. Pada saat itu, Fachry mengetahui ada pengendara motor yang melanggar rambu lalu lintas. Setelah ditilang, ternyata pengendara tersebut adalah kepala kepolisian. Tanpa ragu, Fachry tetap menilangnya. Sikap yang diterapkan oleh Fachry mencerminkan integritas...</label><br>
+        <input type="radio" name="q42" value="A"> A. Fachry adalah seorang polisi yang taat pada aturan<br>
+        <input type="radio" name="q42" value="B"> B. Fachry adalah seorang polisi yang disiplin dan menjalankan tugas sesuai aturan yang berlaku.<br>
+        <input type="radio" name="q42" value="C"> C. Fachry adalah seorang polisi yang berani dan menilang kepala kepolisian yang melanggar aturan.<br>
+        <input type="radio" name="q42" value="D"> D. Fachry adalah seorang polisi yang jujur dan menilang kepala kepolisian dengan adil.<br>
+        <input type="radio" name="q42" value="E"> E. Fachry adalah seorang polisi yang peduli terhadap semua pengendara jalan.<br>
+    </div>
+    
+    <div class="question" data-question="q43">
+        <label>43. Kerja keras adalah sikap yang penting dalam mencapai cita-cita, namun tidak semua tindakan mencerminkan upaya yang mendukung kebiasaan ini. Dari pernyataan berikut, manakah yang paling tidak sejalan dengan upaya membiasakan perilaku kerja keras?</label><br>
+        <input type="radio" name="q43" value="A"> A. Berusaha menjauh dari orang-orang yang hanya berfokus pada kesenangan tanpa memikirkan masa depan.<br>
+        <input type="radio" name="q43" value="B"> B. Menyerap kritik dan nasihat sebagai masukan berharga untuk pengembangan diri.<br>
+        <input type="radio" name="q43" value="C"> C. Menjaga integritas dengan selalu menghindari tindakan tercela baik di dalam maupun di luar pekerjaan.<br>
+        <input type="radio" name="q43" value="D"> D. Menghindari pengingat atau koreksi terhadap rekan kerja yang melakukan kesalahan karena dianggap tidak penting.<br>
+        <input type="radio" name="q43" value="E"> E. Mencari lingkungan yang dipenuhi dengan individu-individu berorientasi pada tujuan dan pencapaian.<br>
+    </div>
+    
+    <div class="question" data-question="q44">
+        <label>44. UUD 1945 Pasal 1 ayat 3 menyatakan bahwa negara Indonesia adalah negara hukum, yang berarti segala tatanan dalam kehidupan berbangsa, bermasyarakat, dan bernegara didasarkan atas hukum yang berlaku. Manakah dari tindakan berikut yang benar-benar mencerminkan implementasi dari pasal tersebut?</label><br>
+        <input type="radio" name="q44" value="A"> A. Menghormati keputusan pengadilan meskipun bertentangan dengan kepentingan pribadi.<br>
+        <input type="radio" name="q44" value="B"> B. Mengutamakan musyawarah untuk mufakat dalam setiap pengambilan keputusan di lingkungan masyarakat.<br>
+        <input type="radio" name="q44" value="C"> C. Menyelesaikan perselisihan antar warga dengan mediasi tanpa melibatkan aparat hukum.<br>
+        <input type="radio" name="q44" value="D"> D. Menghindari pelanggaran aturan sosial yang tidak tertulis demi menjaga ketertiban bersama.<br>
+        <input type="radio" name="q44" value="E"> E. Menjalankan setiap keputusan pemimpin daerah tanpa mempertanyakan legalitasnya.<br>
+    </div>
+    
+    <div class="question" data-question="q45">
+        <label>45. Seorang warga negara yang aktif membantu evakuasi korban banjir dan memberikan bantuan logistik selama bencana mencerminkan bentuk partisipasi dalam bela negara melalui...</label><br>
+        <input type="radio" name="q45" value="A"> A. Mengambil peran dalam menjaga keamanan dan ketertiban di wilayah terdampak bencana untuk memastikan keselamatan warga.<br>
+        <input type="radio" name="q45" value="B"> B. Berkontribusi dalam kegiatan sosial dan kemanusiaan yang mendukung solidaritas nasional.<br>
+        <input type="radio" name="q45" value="C"> C. Berpartisipasi dalam kegiatan ekonomi pasca-bencana untuk mempercepat pemulihan dan stabilitas di wilayah terdampak.<br>
+        <input type="radio" name="q45" value="D"> D. Terlibat dalam penyusunan rencana kebijakan darurat untuk memitigasi dampak bencana di masa depan.<br>
+        <input type="radio" name="q45" value="E"> E. Mempromosikan nilai-nilai gotong royong dan kebersamaan melalui pelestarian budaya lokal di wilayah terdampak.<br>
+    </div>
+    <div class="question" data-question="q46">
+        <label>46. Deklarasi Juanda pada tahun 1957 adalah salah satu tonggak penting dalam sejarah maritim Indonesia, yang menyatukan perairan nusantara di bawah satu kedaulatan dan diakui oleh dunia internasional. Dalam konteks politik dan hukum internasional saat ini, tantangan utama yang dihadapi oleh Indonesia dalam mempertahankan kedaulatan maritim sesuai dengan prinsip Deklarasi Juanda adalah...</label><br>
+        <input type="radio" name="q46" value="A"> A. Meningkatnya aktivitas ilegal di perairan Indonesia, seperti penangkapan ikan secara ilegal dan penyelundupan.<br>
+        <input type="radio" name="q46" value="B"> B. Perluasan zona ekonomi eksklusif (ZEE) yang menimbulkan sengketa dengan negara tetangga.<br>
+        <input type="radio" name="q46" value="C"> C. Kurangnya kesadaran masyarakat tentang pentingnya batas-batas maritim Indonesia.<br>
+        <input type="radio" name="q46" value="D"> D. Keterbatasan anggaran pemerintah dalam memperkuat armada keamanan laut.<br>
+        <input type="radio" name="q46" value="E"> E. Perubahan kebijakan internasional yang mengurangi pengaruh Deklarasi Juanda dalam menentukan batas maritim Indonesia.<br>
+    </div>
+    
+    <div class="question" data-question="q47">
+        <label>47. Pasal 26 UUD 1945 menyatakan bahwa yang menjadi warga negara adalah orang Indonesia asli dan orang lain yang disahkan dengan undang-undang. Berdasarkan pasal tersebut, manakah tindakan berikut yang tidak sesuai dengan prinsip kewarganegaraan Indonesia?</label><br>
+        <input type="radio" name="q47" value="A"> A. Pemain sepak bola asing yang lama tinggal di Indonesia mengajukan permohonan naturalisasi.<br>
+        <input type="radio" name="q47" value="B"> B. Anak lahir di luar negeri dari ibu WNI dan ayah WNA dapat memilih kewarganegaraan di usia tertentu.<br>
+        <input type="radio" name="q47" value="C"> C. WNA yang menikah dengan WNI secara otomatis menjadi warga Indonesia setelah pernikahan.<br>
+        <input type="radio" name="q47" value="D"> D. Warga negara asing yang telah lama tinggal di Indonesia dapat mengajukan permohonan kewarganegaraan setelah memenuhi syarat tertentu.<br>
+        <input type="radio" name="q47" value="E"> E. Presiden memberikan kewarganegaraan kepada WNA yang berjasa bagi negara.<br>
+    </div>
+    
+    <div class="question" data-question="q48">
+        <label>48. Di Desa Sukamaju, sedang diadakan kegiatan gotong royong untuk membersihkan lingkungan desa. Apa tindakan Andi sebagai warga Desa Sukamaju yang paling mencerminkan tanggung jawab sosialnya?</label><br>
+        <input type="radio" name="q48" value="A"> A. Mengikuti kegiatan gotong royong karena diharapkan warga lain.<br>
+        <input type="radio" name="q48" value="B"> B. Hadir di awal kegiatan untuk menunjukkan dukungan.<br>
+        <input type="radio" name="q48" value="C"> C. Berpartisipasi penuh dan membantu mengorganisir kegiatan.<br>
+        <input type="radio" name="q48" value="D"> D. Mengamati jalannya kegiatan sambil siap membantu jika diperlukan.<br>
+        <input type="radio" name="q48" value="E"> E. Mengelola waktu antara gotong royong dan urusan pribadinya.<br>
+    </div>
+    
+    <div class="question" data-question="q49">
+        <label>49. Planet Jupiter merupakan planet terbesar di Tata Surya, dengan diameter sekitar 142.984 km. Planet ini memiliki medan magnet yang sangat kuat, sekitar 20.000 kali lebih kuat dibandingkan dengan medan magnet Bumi. Jupiter juga dikenal memiliki banyak bulan, dengan empat bulan terbesar yang disebut Galilean moons: Io, Europa, Ganymede, dan Callisto. Jupiter memiliki atmosfer yang sebagian besar terdiri dari hidrogen dan helium, serta badai besar yang dikenal sebagai Great Red Spot, yang telah berlangsung selama lebih dari 300 tahun. Jupiter memerlukan waktu sekitar 12 tahun Bumi untuk menyelesaikan satu kali revolusi mengelilingi Matahari. Kalimat utama dari paragraf tersebut adalah ...</label><br>
+        <input type="radio" name="q49" value="A"> A. Planet Jupiter memiliki diameter terbesar di Tata Surya, sekitar 142.984 km.<br>
+        <input type="radio" name="q49" value="B"> B. Planet Jupiter memiliki medan magnet terkuat di Tata Surya, sekitar 20.000 kali lebih kuat dibandingkan Bumi.<br>
+        <input type="radio" name="q49" value="C"> C. Planet Jupiter merupakan planet terbesar di Tata Surya.<br>
+        <input type="radio" name="q49" value="D"> D. Planet Jupiter merupakan planet dengan banyak bulan, termasuk empat yang terbesar yaitu Io, Europa, Ganymede, dan Callisto.<br>
+        <input type="radio" name="q49" value="E"> E. Planet Jupiter merupakan planet yang atmosfernya sebagian besar terdiri dari hidrogen dan helium.<br>
+    </div>
+    
+    <div class="question" data-question="q50">
+        <label>50. Yoga adalah seorang penggemar sepak bola yang sangat antusias. Suatu hari, Yoga mendengar bahwa Tim Nasional Indonesia akan bertanding melawan Thailand di Stadion Gelora Bung Karno (GBK). Namun, pada saat yang bersamaan, Yoga memiliki tugas penting yang harus diselesaikan. Sebagai seorang yang menjunjung tinggi nilai-nilai nasionalisme, tindakan yang paling tepat yang seharusnya dilakukan oleh Yoga adalah...</label><br>
+        <input type="radio" name="q50" value="A"> A. Mengabaikan pertandingan tersebut dan fokus menyelesaikan tugasnya dengan baik untuk memastikan pekerjaannya selesai tepat waktu.<br>
+        <input type="radio" name="q50" value="B"> B. Menyelesaikan tugasnya terlebih dahulu, lalu berusaha hadir di stadion untuk mendukung Tim Nasional Indonesia secara langsung jika tugasnya memungkinkan.<br>
+        <input type="radio" name="q50" value="C"> C. Menunda menyelesaikan tugas dan segera berangkat ke Jakarta untuk menonton pertandingan sebagai bentuk dukungan langsung kepada Tim Nasional.<br>
+        <input type="radio" name="q50" value="D"> D. Menyelesaikan tugasnya terlebih dahulu dan menonton pertandingan di televisi setelah semua pekerjaannya selesai sebagai bentuk dukungan dari rumah.<br>
+        <input type="radio" name="q50" value="E"> E. Mengabaikan pertandingan dan memutuskan untuk tidak menonton atau memberikan dukungan sama sekali karena tugasnya lebih penting.<br>
+    </div>
+    
+    <div class="question" data-question="q51">
+        <label>51. Manakah di bawah ini yang memiliki penggunaan tanda baca yang tepat adalah ...</label><br>
+        <input type="radio" name="q51" value="A"> A. Pada hari Minggu, Andi pergi ke taman bersama Budi, dan Eko.<br>
+        <input type="radio" name="q51" value="B"> B. Dia berkata bahwa "Saya tidak akan ikut ke acara tersebut."<br>
+        <input type="radio" name="q51" value="C"> C. Mereka selalu berangkat pukul 08:00 pagi untuk bekerja.<br>
+        <input type="radio" name="q51" value="D"> D. Hari Senin, Bu Rina mengajar Matematika, Bahasa Indonesia, dan IPA.<br>
+        <input type="radio" name="q51" value="E"> E. Saat istirahat, Ani membaca buku, sambil mendengarkan musik.<br>
+    </div>
+    
+    <div class="question" data-question="q52">
+        <label>52. Dalam sistem pemerintahan Indonesia, setiap lembaga negara memiliki peran internal dan eksternal yang saling mendukung untuk mencapai tujuan nasional. Manakah dari tindakan berikut yang paling tepat menggambarkan implementasi peran internal dan eksternal lembaga negara dalam menjaga stabilitas dan kemajuan bangsa?</label><br>
+        <input type="radio" name="q52" value="A"> A. Mahkamah Konstitusi (MK) menyelesaikan sengketa hasil pemilu sebagai bentuk peran eksternal dan memberikan keputusan yang mengikat lembaga lainnya.<br>
+        <input type="radio" name="q52" value="B"> B. Badan Pemeriksa Keuangan (BPK) mengaudit laporan keuangan pemerintah pusat sebagai peran internal dan melaporkan hasilnya kepada DPR untuk pengambilan kebijakan.<br>
+        <input type="radio" name="q52" value="C"> C. Komisi Pemberantasan Korupsi (KPK) bekerja sama dengan lembaga internasional dalam pemberantasan korupsi sebagai peran internal dan melakukan penindakan di dalam negeri.<br>
+        <input type="radio" name="q52" value="D"> D. Dewan Perwakilan Rakyat (DPR) mengesahkan undang-undang bersama Presiden sebagai peran eksternal dan mengawasi pelaksanaannya oleh pemerintah sebagai peran internal.<br>
+        <input type="radio" name="q52" value="E"> E. Presiden RI mengadakan rapat terbatas dengan para menteri untuk merumuskan kebijakan nasional sebagai peran eksternal dan mengimplementasikannya melalui instruksi presiden sebagai peran internal.<br>
+    </div>
+    
+    <div class="question" data-question="q53">
+        <label>53. Perhatikan pernyataan berikut!</label><br>
+        <ol>
+            <li>Anak-anak rela membatalkan rencana liburan mereka untuk membantu merawat anggota keluarga yang sedang sakit.</li>
+            <li>Seorang kakak merelakan mainan kesayangannya untuk sang adik.</li>
+            <li>Bersedia membantu ibu yang sedang kesulitan mengasuh adik.</li>
+            <li>Mengikuti upacara di sekolah dengan khidmat meskipun tidak diwajibkan.</li>
+            <li>Membantu warga yang sedang melakukan gotong royong di lingkungan sekitar tanpa diminta.</li>
+        </ol>
+        
+        Rela berkorban adalah sikap dan perilaku yang tindakannya dilakukan dengan ikhlas serta mendahulukan kepentingan orang lain daripada kepentingan diri sendiri. Dari uraian di atas, contoh rela berkorban dalam keluarga adalah...<br>
+        <input type="radio" name="q53" value="A"> A. 1, 2, dan 4<br>
+        <input type="radio" name="q53" value="B"> B. 1, 3, dan 5<br>
+        <input type="radio" name="q53" value="C"> C. 2, 3, dan 4<br>
+        <input type="radio" name="q53" value="D"> D. 1, 2, dan 3<br>
+        <input type="radio" name="q53" value="E"> E. 1, 4, dan 5<br>
+    </div>
+    
+    <div class="question" data-question="q54">
+        <label>54. Pak Denis adalah seorang guru honorer di daerah yang sangat terpencil dan minim fasilitas. Namun, Pak Denis tidak pernah mengeluh dan tetap semangat untuk mengajar murid-murid di sana meskipun hanya mendapatkan upah yang sedikit. Dari pernyataan di atas, sikap Pak Denis mencerminkan...</label><br>
+        <input type="radio" name="q54" value="A"> A. Sikap semangat dalam mencerdaskan anak-anak di desa terpencil.<br>
+        <input type="radio" name="q54" value="B"> B. Sikap rela berkorban demi mencerdaskan anak-anak di desa terpencil.<br>
+        <input type="radio" name="q54" value="C"> C. Sikap patriotisme yang ditunjukkan dengan bekerja keras demi mengumpulkan harta.<br>
+        <input type="radio" name="q54" value="D"> D. Sikap bela negara yang diwujudkan dengan hanya mengajar untuk memenuhi tugas administratif.<br>
+        <input type="radio" name="q54" value="E"> E. Sikap nasionalisme yang ditunjukkan dengan harapan mendapatkan pengakuan dari pihak luar.<br>
+    </div>
+    
+    <div class="question" data-question="q55">
+        <label>55. Aziz, seorang ASN yang dikenal menjunjung tinggi nilai-nilai nasionalisme dan toleransi, menyaksikan dua warga Desa Tempuran terlibat dalam perdebatan sengit selama Pilkades karena perbedaan dukungan terhadap calon kepala desa. Sebagai seorang ASN yang harus netral dan menjaga ketertiban, tindakan yang paling tepat yang seharusnya dilakukan oleh Aziz adalah...</label><br>
+        <input type="radio" name="q55" value="A"> A. Menegur kedua warga tersebut dan mengedukasi mereka tentang pentingnya toleransi dan nasionalisme dalam menjaga persatuan.<br>
+        <input type="radio" name="q55" value="B"> B. Mengajak kedua warga tersebut untuk menenangkan diri dan menghindari konflik lebih lanjut, agar proses Pilkades berjalan lancar.<br>
+        <input type="radio" name="q55" value="C"> C. Mengingatkan kedua warga tersebut bahwa perdebatan tidak akan menghasilkan manfaat positif dan mengganggu ketertiban umum.<br>
+        <input type="radio" name="q55" value="D"> D. Melaporkan kejadian tersebut kepada panitia Pilkades agar mereka dapat mengambil tindakan yang diperlukan untuk menjaga ketertiban.<br>
+        <input type="radio" name="q55" value="E"> E. Mengajak kedua warga tersebut untuk menyelesaikan perbedaan pendapat mereka dengan cara yang lebih santun dan sportif.<br>
+    </div>
+    <div class="question" data-question="q56">
+        <label>56. Gajah Sumatera adalah salah satu spesies gajah yang terancam punah. Meskipun mereka memiliki peran penting dalam menjaga keseimbangan ekosistem hutan, populasi mereka terus berkurang setiap tahun. Perburuan liar untuk mendapatkan gading gajah dan perusakan habitat alami mereka menjadi penyebab utama penurunan jumlah gajah ini. Banyaknya lahan hutan yang dibuka untuk perkebunan dan pemukiman juga menyebabkan habitat mereka semakin menyempit. Oleh karena itu, keberadaan Gajah Sumatera semakin kritis, dan hewan ini berisiko punah jika tidak ada upaya serius untuk melindungi dan melestarikannya. Ide pokok bacaan di atas adalah ...</label><br>
+        <input type="radio" name="q56" value="A"> A. Gajah Sumatera berperan penting dalam menjaga keseimbangan ekosistem hutan, namun populasinya terus berkurang.<br>
+        <input type="radio" name="q56" value="B"> B. Perburuan liar dan perusakan habitat menjadi penyebab utama penurunan populasi Gajah Sumatera.<br>
+        <input type="radio" name="q56" value="C"> C. Lahan hutan yang dibuka untuk perkebunan dan pemukiman menyebabkan habitat Gajah Sumatera semakin menyempit.<br>
+        <input type="radio" name="q56" value="D"> D. Gajah Sumatera adalah salah satu spesies gajah yang terancam punah akibat perburuan liar.<br>
+        <input type="radio" name="q56" value="E"> E. Keberadaan Gajah Sumatera semakin kritis dan berisiko punah.<br>
+    </div>
+    
+    <div class="question" data-question="q57">
+        <label>57. Pasal 27 ayat 3 UUD 1945 menyatakan bahwa setiap warga negara berhak dan wajib ikut serta dalam upaya pembelaan negara. Berdasarkan hal tersebut, manakah dari tindakan berikut yang paling mencerminkan implementasi bela negara dalam kehidupan sehari-hari?</label><br>
+        <input type="radio" name="q57" value="A"> A. Cahaya adalah seorang guru matematika yang fokus meningkatkan kemampuan siswa dalam berhitung dan menyelesaikan soal.<br>
+        <input type="radio" name="q57" value="B"> B. Raka adalah seorang pengusaha yang memperluas usahanya untuk mendapatkan keuntungan maksimal.<br>
+        <input type="radio" name="q57" value="C"> C. Lintang adalah seorang warga negara yang selalu membayar pajak tepat waktu sebagai wujud tanggung jawabnya kepada negara.<br>
+        <input type="radio" name="q57" value="D"> D. Najla adalah seorang atlet yang memenangkan medali emas olimpiade Matematika dan menjadi panutan bagi generasi muda di sekolahnya.<br>
+        <input type="radio" name="q57" value="E"> E. Andi adalah seorang karyawan yang berusaha meningkatkan keterampilan pribadi demi mencapai karier yang lebih baik di masa depan.<br>
+    </div>
+    
+    <div class="question" data-question="q58">
+        <label>58. Afif sedang memimpin sebuah seminar. Di tengah-tengah seminar, beberapa peserta mulai berbicara dan tidak memperhatikan materi yang disampaikan. Sebagai seorang tokoh yang berintegritas, tindakan yang paling tepat yang seharusnya dilakukan oleh Afif untuk menjaga kelancaran seminar adalah...</label><br>
+        <input type="radio" name="q58" value="A"> A. Menegur dengan tegas dan mengingatkan pentingnya seminar ini, agar semua peserta fokus dan tidak mengganggu jalannya acara.<br>
+        <input type="radio" name="q58" value="B"> B. Menegur secara bijaksana dan meminta para peserta yang berisik untuk menghargai suasana seminar dan tidak mengganggu orang lain.<br>
+        <input type="radio" name="q58" value="C"> C. Menghentikan sementara seminar dan memberikan kesempatan kepada peserta untuk menenangkan diri sebelum melanjutkan acara.<br>
+        <input type="radio" name="q58" value="D"> D. Mengabaikan peserta yang berisik dan tetap melanjutkan seminar dengan harapan mereka akan sadar sendiri dan berhenti mengganggu.<br>
+        <input type="radio" name="q58" value="E"> E. Menegur dengan santun namun tegas, dan mengajak mereka untuk lebih aktif berpartisipasi dalam diskusi agar tetap terlibat dan fokus.<br>
+    </div>
+    
+    <div class="question" data-question="q59">
+        <label>59. Seorang warga negara yang menjaga persatuan dan kesatuan, menghormati simbol negara, dan aktif dalam kegiatan sosial mencerminkan bentuk nasionalisme yang didasarkan pada...</label><br>
+        <input type="radio" name="q59" value="A"> A. Kesamaan budaya dan tradisi yang dimiliki oleh bangsa.<br>
+        <input type="radio" name="q59" value="B"> B. Kesetiaan kepada negara dan partisipasi aktif dalam kehidupan bermasyarakat.<br>
+        <input type="radio" name="q59" value="C"> C. Upaya untuk memajukan perekonomian negara melalui inovasi.<br>
+        <input type="radio" name="q59" value="D"> D. Kesamaan agama dan kepercayaan dalam masyarakat.<br>
+        <input type="radio" name="q59" value="E"> E. Kesamaan etnis atau suku bangsa sebagai identitas nasional.<br>
+    </div>
+    
+    <div class="question" data-question="q60">
+        <label>60. Sikap cinta tanah air seorang warga negara yang diwujudkan dalam bentuk kepedulian terhadap kemajuan bangsa tercermin pada pernyataan berikut...</label><br>
+        <input type="radio" name="q60" value="A"> A. Memastikan tegaknya nilai-nilai keadilan sosial bagi setiap warga.<br>
+        <input type="radio" name="q60" value="B"> B. Rela berkorban dan selalu mengutamakan kepentingan negara.<br>
+        <input type="radio" name="q60" value="C"> C. Menciptakan berbagai inovasi sesuai dengan profesi masing-masing.<br>
+        <input type="radio" name="q60" value="D"> D. Adanya rasa memiliki terhadap bangsa yang diwujudkan dengan melestarikan lingkungan sekitar.<br>
+        <input type="radio" name="q60" value="E"> E. Memaksimalkan anggaran pendidikan dalam menunjang fasilitas pendidikan di berbagai wilayah NKRI.<br>
+    </div>
+    <div class="question" data-question="q61">
+        <label>61. Farrel adalah seorang pelajar. Di bawah ini, yang menjadi sikap nasionalisme dalam konteks pelajar adalah ...</label><br>
+        <input type="radio" name="q61" value="A"> A. Ikut membantu mengoordinir organisasi sekolah sebagai wujud pengabdian.<br>
+        <input type="radio" name="q61" value="B"> B. Ikut melaksanakan upacara bendera dengan penuh kesadaran sebagai pelajar.<br>
+        <input type="radio" name="q61" value="C"> C. Aktif dalam kegiatan olahraga untuk meningkatkan nama baik sekolah.<br>
+        <input type="radio" name="q61" value="D"> D. Mengikuti lomba antar kelas untuk mengembangkan kemampuan.<br>
+        <input type="radio" name="q61" value="E"> E. Menggunakan batik setiap hari Jumat sebagai tanda taat aturan.<br>
+    </div>
+    
+    <div class="question" data-question="q62">
+        <label>62. Pasal 30 UUD 1945 menjelaskan hak dan kewajiban warga negara dalam pembelaan negara. Tindakan yang paling mencerminkan penerapan pasal ini di lingkungan masyarakat adalah...</label><br>
+        <input type="radio" name="q62" value="A"> A. Secara aktif berpartisipasi dalam kegiatan keamanan lingkungan untuk mencegah ancaman yang dapat mengganggu stabilitas nasional.<br>
+        <input type="radio" name="q62" value="B"> B. Melindungi dan merawat lingkungan sekitar sebagai upaya menjaga ketahanan lingkungan yang berkelanjutan.<br>
+        <input type="radio" name="q62" value="C"> C. Menunjukkan toleransi terhadap perbedaan agama untuk memperkuat persatuan di tengah masyarakat yang majemuk.<br>
+        <input type="radio" name="q62" value="D"> D. Membantu warga yang terdampak bencana alam dengan fokus pada pemulihan sosial dan ekonomi.<br>
+        <input type="radio" name="q62" value="E"> E. Mendukung kebijakan RT yang berfokus pada peningkatan keamanan dan ketertiban lingkungan.<br>
+    </div>
+    
+    <div class="question" data-question="q63">
+        <label>63. [1] Taman kota ini sangat indah dan nyaman untuk dikunjungi. [2] Banyak orang datang ke taman ini setiap hari, terutama pada akhir pekan. [3] Karena taman ini menyediakan berbagai fasilitas seperti area bermain anak-anak, jalur jogging, dan area piknik yang luas. [4] Bahkan, taman ini juga sering digunakan sebagai tempat untuk berbagi acara komunitas. [5] Pengunjung dapat menikmati suasana segar dan sejuk di bawah pepohonan rindang.<br>Perbaikan kalimat efektif pada kalimat 3 yang tepat di bawah ini adalah...</label><br>
+        <input type="radio" name="q63" value="A"> A. "Taman ini menyediakan berbagai fasilitas seperti area bermain anak-anak, jalur jogging, dan area piknik yang luas."<br>
+        <input type="radio" name="q63" value="B"> B. "Karena taman ini menyediakan berbagai fasilitas seperti area bermain anak-anak, jalur jogging, dan area piknik yang luas, maka banyak orang yang tertarik untuk datang."<br>
+        <input type="radio" name="q63" value="C"> C. "Karena banyak pengunjung yang datang setiap hari, taman ini menyediakan berbagai fasilitas seperti area bermain anak-anak, jalur jogging, dan area piknik yang luas."<br>
+        <input type="radio" name="q63" value="D"> D. "Oleh sebab itu, taman ini menyediakan berbagai fasilitas seperti area bermain anak-anak, jalur jogging, dan area piknik yang luas."<br>
+        <input type="radio" name="q63" value="E"> E. "Untuk meningkatkan jumlah pengunjung, taman ini menyediakan berbagai fasilitas seperti area bermain anak-anak, jalur jogging, dan area piknik yang luas."<br>
+    </div>
+    
+    <div class="question" data-question="q64">
+        <label>64. Di Indonesia yang beragam terdiri atas kesatuan rangkaian nilai-nilai luhur yang wawasannya menyeluruh terhadap kehidupan, dan berfungsi sebagai kerangka acuan, baik untuk menata kehidupan diri pribadi maupun dalam interaksi manusia dalam masyarakat serta alam sekitarnya. Dari pernyataan tersebut Pancasila dianggap sebagai...</label><br>
+        <input type="radio" name="q64" value="A"> A. Pancasila sebagai dasar Negara Republik Indonesia yang majemuk.<br>
+        <input type="radio" name="q64" value="B"> B. Pancasila sebagai pandangan hidup bagi bangsa Indonesia.<br>
+        <input type="radio" name="q64" value="C"> C. Pancasila sebagai ideologi bangsa dan negara Indonesia.<br>
+        <input type="radio" name="q64" value="D"> D. Pancasila sebagai citra dan identitas bangsa Indonesia.<br>
+        <input type="radio" name="q64" value="E"> E. Pancasila sebagai bentuk yang harus ditaati seperti Undang-Undang.<br>
+    </div>
+    
+    <div class="question" data-question="q65">
+        <label>65. Bermain game online telah menjadi aktivitas populer di kalangan anak muda maupun orang dewasa. Banyak game online yang menawarkan tantangan menarik, grafis yang memukau, dan fitur sosial yang memungkinkan pemain berinteraksi dengan teman-teman atau bahkan dengan orang asing dari berbagai belahan dunia. Selain itu, beberapa game online juga menyediakan kompetisi eSports yang memungkinkan pemain untuk berpartisipasi dalam turnamen dengan hadiah besar. Namun, di sisi lain, banyak juga yang mengkhawatirkan dampak negatif dari bermain game terlalu lama, seperti gangguan kesehatan fisik dan mental. Terlalu banyak waktu yang dihabiskan di depan layar dapat menyebabkan masalah mata, gangguan tidur, dan berkurangnya aktivitas fisik. Simpulan untuk paragraf di atas adalah...</label><br>
+        <input type="radio" name="q65" value="A"> A. Bermain game online dapat menyebabkan masalah kesehatan fisik dan mental jika dilakukan terlalu lama.<br>
+        <input type="radio" name="q65" value="B"> B. Game online menawarkan tantangan menarik, grafis memukau, dan fitur sosial yang memungkinkan interaksi antar pemain.<br>
+        <input type="radio" name="q65" value="C"> C. Meskipun game online menawarkan banyak kesenangan dan manfaat, pemain perlu waspada terhadap dampak negatif yang mungkin timbul dari bermain terlalu lama.<br>
+        <input type="radio" name="q65" value="D"> D. Turnamen eSports menjadi salah satu daya tarik utama bagi pemain game online untuk berkompetisi dan memenangkan hadiah.<br>
+        <input type="radio" name="q65" value="E"> E. Bermain game online adalah aktivitas yang sangat populer di kalangan anak muda dan orang dewasa.<br>
+    </div>
+    
+    <button onclick="submitQuiz()">Kumpulkan Jawaban</button>
+
+
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+const correctAnswers = {
+    q1: "B",
+    q2: "C",
+    q3: "A",
+    q4: "B",
+    q5: "C",
+    q6: "A",
+    q7: "A",
+    q8: "C",
+    q9: "A",
+    q10: "C",
+    q11: "A",
+    q12: "C",
+    q13: "D",
+    q14: "B",
+    q15: "B",
+    q16: "C",
+    q17: "A",
+    q18: "C",
+    q19: "D",
+    q20: "B",
+    q21: "C",
+    q22: "A",
+    q23: "E",
+    q24: "B",
+    q25: "C",
+    q26: "A",
+    q27: "D",
+    q28: "D",
+    q29: "B",
+    q30: "A",
+    q31: "D",
+    q32: "B",
+    q33: "C",
+    q34: "B",
+    q35: "C",
+    q36: "D",
+    q37: "D",
+    q38: "B",
+    q39: "D",
+    q40: "A",
+    q41: "B",
+    q42: "D",
+    q43: "D",
+    q44: "A",
+    q45: "B",
+    q46: "B",
+    q47: "C",
+    q48: "C",
+    q49: "C",
+    q50: "B",
+    q51: "D",
+    q52: "B",
+    q53: "D",
+    q54: "B",
+    q55: "A",
+    q56: "E",
+    q57: "C",
+    q58: "E",
+    q59: "B",
+    q60: "C",
+    q61: "B",
+    q62: "A",
+    q63: "A",
+    q64: "B",
+    q65: "C"
+};
+
+    function checkSubmitStatus() {
+    let submitButton = document.querySelector('button');
+    alert("Anda sudah pernah mengerjakan test ini sebelumnya")
+    
+    if (localStorage.getItem('quizSubmitted') === 'true') {
+        // Jika ujian sudah disubmit, disable tombol
+        submitButton.disabled = true;
+        submitButton.style.backgroundColor = '#ccc';
+        submitButton.style.cursor = 'not-allowed';
+    }
+}
+
+  // Fungsi untuk menyimpan jawaban ke localStorage
+  function saveAnswer(question, answer) {
+            localStorage.setItem(question, answer);
+        }
+
+        // Fungsi untuk mengisi ulang jawaban yang sudah disimpan di localStorage
+        function loadSavedAnswers() {
+            const questions = document.querySelectorAll('.question');
+            
+            questions.forEach(questionDiv => {
+                const questionName = questionDiv.getAttribute('data-question');
+                const savedAnswer = localStorage.getItem(questionName);
+
+                if (savedAnswer) {
+                    const selectedOption = document.querySelector(`input[name="${questionName}"][value="${savedAnswer}"]`);
+                    if (selectedOption) {
+                        selectedOption.checked = true; // Pilih opsi yang sudah disimpan
+                    }
+                }
+            });
+        }
+
+        // Tambahkan event listener untuk setiap input radio agar menyimpan jawaban secara otomatis
+        const radios = document.querySelectorAll('input[type="radio"]');
+        radios.forEach(radio => {
+            radio.addEventListener('change', function() {
+                const question = this.name;   // Nama soal (q1, q2, dll)
+                const answer = this.value;    // Nilai jawaban yang dipilih (A, B, C, dll)
+                saveAnswer(question, answer); // Simpan jawaban di localStorage
+            });
+        });
+
+const timeLimit = 100 * 60 * 1000; // 100 menit dalam milidetik (6000000 ms)
+
+// Fungsi untuk memulai timer saat pertama kali halaman dibuka
+function initializeTime() {
+    if (!localStorage.getItem('startTime')) {
+        // Simpan waktu pertama kali halaman dibuka
+        localStorage.setItem('startTime', new Date().getTime());
+    }
+}
+
+// Fungsi untuk menghitung sisa waktu dan menampilkan countdown
+function startTimer() {
+    let startTime = localStorage.getItem('startTime');
+    let currentTime = new Date().getTime();
+    let timePassed = currentTime - startTime;
+    let timeLeft = timeLimit - timePassed;
+    // let timeLeft = 9100000 - timePassed;
+
+    if (timeLeft <= 0) {
+        // Jika waktu habis, tampilkan pesan timeout dan disable tombol submit
+        document.getElementById('timer').innerHTML = "Waktu habis!";
+        let submitButton = document.querySelector('button');
+        submitButton.disabled = true;
+        submitButton.style.backgroundColor = '#ccc';
+        return;
+    }
+
+    // Hitung menit dan detik tersisa
+    let minutes = Math.floor(timeLeft / (1000 * 60));
+    let seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+    // Tampilkan waktu tersisa
+    document.getElementById('timer').innerHTML = `Sisa Waktu: ${minutes} menit ${seconds} detik`;
+  
+    if(minutes < 10){
+        if(seconds % 2 == 0){
+        document.getElementById('timer').style.color = "red"
+    } else {
+        document.getElementById('timer').style.color = "black"
+    }
+    }
+  
+    // Update countdown setiap 1 detik
+    setTimeout(startTimer, 1000);
+}
+    function submitQuiz() {
+    let totalQuestions = Object.keys(correctAnswers).length;
+    let allAnswered = true;
+
+    // Cek apakah semua pertanyaan telah dijawab
+    for (let question in correctAnswers) {
+        let userAnswer = document.querySelector(`input[name="${question}"]:checked`);
+        if (!userAnswer) {
+            allAnswered = false;
+            break; // Hentikan pengecekan begitu ditemukan soal yang belum dijawab
+        }
+    }
+
+    // Jika ada soal yang belum dijawab, tampilkan alert dan batalkan submit
+    if (!allAnswered) {
+        alert("Silakan jawab semua pertanyaan sebelum mengumpulkan!");
+        return; // Batalkan proses submit
+    }
+
+    // Jika semua soal dijawab, lanjutkan proses perhitungan skor dan menampilkan hasil
+    let score = 0;
+
+    // Loop through each question
+    for (let question in correctAnswers) {
+        let userAnswer = document.querySelector(`input[name="${question}"]:checked`);
+        let correctAnswer = correctAnswers[question];
+        let questionDiv = document.querySelector(`div[data-question="${question}"]`);
+
+        // Bersihkan ikon sebelumnya agar tidak terjadi duplikasi
+        questionDiv.querySelectorAll('label').forEach(label => {
+            label.innerHTML = label.innerHTML.replace(/✔️|❌/g, ''); // Hapus ikon sebelumnya
+            label.classList.remove('correct-answer', 'wrong-answer'); // Reset class
+        });
+
+        // Jika jawaban user ada
+        if (userAnswer) {
+            // Jika jawabannya benar
+            if (userAnswer.value === correctAnswer) {
+                score++;
+             
+                userAnswer.parentElement.innerHTML += '<span class="icon" style="color: green;">Jawaban yang benar '+ correctAnswer +'</span> <span style="font-weight: bold; ">|| Jawaban saya '+ userAnswer.value +' ✔️</span>'; // Tambahkan centang hijau
+                // userAnswer.parentElement.classList.add('correct-answer'); // Beri warna hijau
+            } else {
+                // Jika jawabannya salah
+                userAnswer.parentElement.innerHTML += '<span class="icon" style="color: red;">Jawaban yang benar '+ correctAnswer +'</span> <span style="font-weight: bold; ;">|| Jawaban saya '+ userAnswer.value +' ❌</span>';; 
+                // userAnswer.parentElement.classList.add('wrong-answer'); // Coret jawaban salah
+            }
+
+           
+        }
+    }
+    
+    // Tampilkan skor
+    let resultText = `Skor Anda: ${score*5} dari ${totalQuestions*5}`;
+    document.getElementById('result').innerHTML = resultText;
+    localStorage.setItem('quizSubmitted', 'true');
+    localStorage.setItem('quizResult', score);
+}
+function loadSavedResult() {
+            const result = localStorage.getItem('quizResult');
+            if (result) {
+                let resultText = `Anda sudah pernah submit jawaban sebelumnya, Skor Anda: ${result*5} dari ${35*5}`;
+                let submitButton = document.querySelector('button');
+                submitButton.disabled = true;
+                submitButton.style.backgroundColor = '#ccc';
+                submitButton.style.cursor = 'not-allowed';
+                document.getElementById('result').innerHTML = resultText;
+            }
+}
+window.onload = function() {
+    // checkSubmitStatus();
+    initializeTime();
+    startTimer();
+    loadSavedAnswers();
+    loadSavedResult();
+}
+</script>
+
+</body>
+</html>
